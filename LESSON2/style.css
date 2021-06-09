@@ -1,0 +1,35 @@
+body {
+  background-color: white;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+.class01 {
+  fill:blue;
+  stroke:gold;
+  stroke-opacity:1;
+  stroke-width:4;
+}
+.classcirc {
+  fill:pink;
+  stroke:green;
+  stroke-opacity:10;
+  stroke-width:3;
+}
+.classcirc:hover,
+.classcirc:focus {
+  filter: invert(7%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+.class01:hover,
+.class01:focus {
+  filter: invert(7%) sepia(51%) saturate(2878%) hue-rotate(46deg) brightness(104%) contrast(97%);
+}
+.class01 {
+  transition: transform .7s ease-in-out;
+}
+.class01:hover {
+  transform: rotate(10deg);
+}
