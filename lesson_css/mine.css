@@ -1,0 +1,64 @@
+
+#std1 {
+    background-color: aquamarine;
+    color: brown;
+}
+
+#std2 {
+    width: 410;
+    background-color: cornflowerblue;
+    color: rgb(122, 233, 137);
+    }
+
+#std2:hover {
+    background-color: rgb(236, 243, 141);
+    transform: translate(40px) rotate(10deg);
+}
+
+#mgrid1 {
+    position: absolute;
+    top: 300;
+    left: 200;
+    width: 200;
+    height: 100;
+    background-color: darkslateblue;
+}
+#mgrid1:hover{
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+#mgrid2 {
+    position: absolute;
+    top: 300;
+    left: 420;
+    width: 200;
+    height: 100;
+    background-color: rgb(139, 61, 61);
+}
+
+#mgrid2:hover{
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+#mgrid3 {
+    position: absolute;
+    top: 420;
+    left: 200;
+    width: 200;
+    height: 100;
+    background-color: darkslateblue;
+}
+
+#mgrid4 {
+    position: absolute;
+    top: 420;
+    left: 420;
+    width: 200;
+    height: 100;
+    background-color: rgb(230, 238, 113);
+}
+
+
+
