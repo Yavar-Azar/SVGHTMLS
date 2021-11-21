@@ -1,0 +1,19 @@
+body {
+    background-color: lightblue;
+  }
+  
+  h1 {
+    color: navy;
+    margin-left: 20px;
+  }
+
+
+.rectangle {
+    height: 50px;
+    width: 100px;
+    background-color: rgb(15, 158, 139);
+  }
+
+#myid {
+    color:violet;
+}

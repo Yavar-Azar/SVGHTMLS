@@ -1,0 +1,32 @@
+body {
+    background-color: white;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+
+.rectangle {
+    height: 50px;
+    width: 300px;
+    background-color: rgb(15, 158, 139);
+    text-align: center;
+}
+
+#myid {
+    color: violet;
+}
+
+#hiddenpart {
+    height: 50px;
+    width: 300px;
+    background-color: yellow;
+}
+
+#dftres {
+    width: 700px;
+    height: 200px;
+    background-color: gold;
+    display: none;
+}
