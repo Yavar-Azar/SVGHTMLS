@@ -20,9 +20,37 @@ function firstfunc(parameter1) {
 
 console.log(firstfunc("John"));
 
+let num1 = document.getElementById("text1");
+let num2 = document.getElementById("text2");
+
+
+let but3 = document.getElementById("but3")
+let result1 = document.getElementById("result1")
+
+
+
+
+
+
+
+but3.onclick = function(){
+    if (num1.value != "" && num2.value != ""){
+        result1.innerHTML = Number(num2.value)+Number(num1.value);
+        console.log("Hiiiiii");
+    }else{
+        result1.innerHTML = "There is empty field";
+    }
+}
+
+
+
 
 let content = document.getElementById("content");
 let button1  = document.getElementById("showmore");
+
+
+
+
 
 
 button1.onclick = function() {
