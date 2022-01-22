@@ -11,10 +11,27 @@ let inputparam = {
   basis : "dzp",
   spin : true,
   ldos : false,
-  pdos: true
+  pdos: true,
+  charge : true,
+  potential : true
 }
 
 
+
+var runtypeval = document.getElementById("runtype").value;
+var labelval = document.getElementById("inplabel");
+var maxscfval = document.getElementById("maxstep");
+var kspacingval = document.getElementById("kspacing");
+var cutoffval = document.getElementById("cutoff");
+var pdosval = document.getElementById("pdos");
+var ldosval = document.getElementById("ldos");
+var chargeval = document.getElementById("charge");
+var potentialval = document.getElementById("potential");
+var basisval = document.getElementById("basis");
+var xfuncval = document.getElementById("xcfunc");
+
+
+console.log(runtypeval)
 
 //  comment this line
 console.log(inputparam["pdos"]+" "+inputparam['kspacing'])
@@ -34,33 +51,65 @@ btn.onclick = function() {
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
+  inputparam['runtype'] = document.getElementById("runtype").value;
+  inputparam['label'] = document.getElementById("inplabel").value;
+  inputparam['maxscf'] = document.getElementById("maxstep").value;
+  inputparam['kspacing'] = document.getElementById("kspacing").value;
+  inputparam['cutoff'] = document.getElementById("cutoff").value;
+  inputparam['pdos']= document.getElementById("pdos").checked;
+  inputparam['ldos'] = document.getElementById("ldos").checked;
+  inputparam['charge'] = document.getElementById("charge").checked;
+  inputparam['potential'] = document.getElementById("potential").checked;
+  inputparam['spin'] = document.getElementById("nspin").checked;
+  inputparam['basis']= document.getElementById("basis").value;
+  inputparam['xcfunc'] = document.getElementById("xcfunc").value;
+  inputparam['xcfunc'] = document.getElementById("xcfunc").value;
+  console.log(inputparam['runtype']);
+  console.log(inputparam['pdos']);
+  console.log(inputparam);
   modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
+    inputparam['runtype'] = document.getElementById("runtype").value;
+    inputparam['label'] = document.getElementById("inplabel").value;
+    inputparam['maxscf'] = document.getElementById("maxstep").value;
+    inputparam['kspacing'] = document.getElementById("kspacing").value;
+    inputparam['cutoff'] = document.getElementById("cutoff").value;
+    inputparam['pdos']= document.getElementById("pdos").checked;
+    inputparam['spin'] = document.getElementById("nspin").checked;
+    inputparam['ldos'] = document.getElementById("ldos").checked;
+    inputparam['charge'] = document.getElementById("charge").checked;
+    inputparam['potential'] = document.getElementById("potential").checked;
+    inputparam['basis']= document.getElementById("basis").value;
+    inputparam['xcfunc'] = document.getElementById("xcfunc").value;
+    console.log(inputparam['runtype']);
+    console.log(inputparam['pdos']);
+    console.log(inputparam);
     modal.style.display = "none";
   }
 }
 
+
+
+
+
+
+
 // ------------------------- END MODAL SCRIPT
-
-
-
 
 //  test
 
 let testbut = document.getElementById("test");
 let selbasis = document.getElementById("basis");
 
-
-
 testbut.onclick = function () { 
     val1 = document.getElementById("Label")
     val2 = document.getElementById("cutoff")
-    console.log(val1.value)
-    console.log(selbasis.value)
+    console.log("---------------\n--------------\n")
+    console.log(inputparam)
 }
 
 
