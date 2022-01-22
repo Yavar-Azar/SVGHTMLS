@@ -1,5 +1,23 @@
 // -----------------MODAL SCRIPT
 
+
+let inputparam = {
+  runtype : "scf",
+  label : "defaultlabel",
+  maxscf : 200,
+  kspacing : 0.2,
+  cutoff : 200,
+  xcfunc : "GGA",
+  basis : "dzp",
+  spin : true,
+  ldos : false,
+  pdos: true
+}
+
+
+
+//  comment this line
+console.log(inputparam["pdos"]+" "+inputparam['kspacing'])
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -27,7 +45,6 @@ window.onclick = function(event) {
 }
 
 // ------------------------- END MODAL SCRIPT
-
 
 
 
