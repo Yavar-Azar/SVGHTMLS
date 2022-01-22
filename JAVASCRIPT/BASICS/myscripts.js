@@ -49,7 +49,13 @@ let content = document.getElementById("content");
 let button1  = document.getElementById("showmore");
 
 
-
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
 
 
 

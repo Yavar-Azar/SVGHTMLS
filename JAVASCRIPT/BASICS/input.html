@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+     rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="inputsiesta.css">
+    <title>Document</title>
+    <script>
+        MathJax = {
+          loader: {load: ['input/asciimath', 'output/chtml']}
+        }
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js">
+    </script>
+</head>
+
+
+<body>
+
+    <div style="margin: 30px; padding: 15px;" id="contrainer1">
+        <p>input builder box</p>
+        <button>Siesta input</button>
+        <button id="myBtn">Open Modal</button>
+    </div>
+
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Input parameters</h2>
+        </div>
+
+        <div class="modal-body">
+            <!-- label and cutoff in text field -->
+            <span>
+                <label for="Label">Label</label>
+                <input  type="text" name="Label" id="Label" value="default01">
+            </span> <br><br>
+
+            <span>
+                <label for="cutoff">Mesh cutoff</label>
+                <input  type="text" name="cutoff" id="cutoff" value="300">
+            </span><br><br>
+
+            <span>
+                <label for="basis">Basis</label>
+                <select name="basis" id="basis">
+                    <option value="sz">SZ</option>
+                    <option value="szp">SZP</option>
+                    <option value="dz">DZ</option>
+                    <option value="dzp">DZP</option>
+                    <option value="tz">TZ</option>
+                </select>
+            </span>
+        </div>
+
+        <!--  delete this button after test -->
+        <div class="modal-footer">
+        </div>
+
+    </div>
+    </div>
+
+
+
+    <button  style="margin: 30px;" id="test">TEST modal values</button>
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script  src = "inpscript.js"></script>
+</body>
