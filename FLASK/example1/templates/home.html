@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div style="box-shadow: 3px 3px #e9e1e1; margin: 20px; padding: 30px; background-color: blanchedalmond; ">
+        <h2>Here is heading</h2>
+        <div style="margin: 20px;">
+            <input type="text" name="numb" id="numb1">
+            <input type="text" name="numb" id="numb2">
+            <br>
+            <button type="button" onclick="sumfunc()"> Sum </button>
+        </div>
+
+        <div id = "sumres" style="width: 200px; height: 40px; margin: 20px; text-align: center; background-color: cadetblue;">
+            result = ???
+        </div>
+
+    </div>
+    <div style="margin: 50px; color: blue;">
+        <h3 id="myname">my name is Hassan </h3>
+        <button type="button" onclick="window.location.href='/secpage';"> Go page 2 </button>
+    </div>
+
+
+<script>
+
+
+    function sumfunc(){
+        var num1 = document.getElementById("numb1").value;
+        var num2 = document.getElementById("numb2").value;
+        data = {
+        "numb1" :num1,
+        "numb2" :num2
+    }
+
+        $.ajax({
+            type: "POST",
+            url: "/solve",
+            data: JSON.stringify(data),
+            contentType: "application/json",
+            dataType: 'json', 
+            success: function(response){
+                document.getElementById("myname").innerHTML=response["firstname"];
+                document.getElementById("sumres").innerHTML=response["res"];
+            }
+        });
+
+    }
+
+
+
+</script>
+
+
+</body>
+</html>
