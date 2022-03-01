@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>File Upload Progress Bar using Python Flask JQuery Ajax and MySQL Database</title>
+<link rel="stylesheet" href='/static/bootstrap-5.1.3-dist/css/bootstrap.min.css'>
+<script type="text/javascript" src="/static/JS/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/static/JS/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/static/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+
+<!--<script src="/static/js/jquery.form.js"></script>-->
+</head>
+    <body>
+        <div class="container">
+            <br />
+            <h3 align="center">File Upload</h3>
+            <br />
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Select file</b></div> <br>
+                <div class="panel-body">
+                    <form id="uploadImage" action="/upload" method="post">
+                        <div class="form-group">
+                            <label>File Upload</label> <br>
+                            <hr>
+                            <input type="file" name="uploadFile" id="uploadFile" accept=".jpg, .png, .txt, .dos, .inp"/>
+                        </div>
+
+                        <span>
+                            <div class="form-group">
+                                <input style="margin: 10px;" type="submit" id="uploadSubmit" value="Upload" class="btn btn-primary" />
+                            </div>
+                            <div class="progress"  style="width: 400px;">
+                                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                        </span>
+
+
+                        <div id="targetLayer" style="display:none;"></div>
+                    </form>
+                    <div id="loader-icon" style="display:none;"><img src="/static/images/loader.gif" /></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div  style="margin: 50px; padding: 20px; background-color: azure; box-shadow: 10px;">
+            <input type="text" name="name" id="name">
+        </div>
+<script>
+$(document).ready(function(){
+    $('#uploadImage').submit(function(event){
+        if($('#uploadFile').val()){
+            event.preventDefault();
+            $('#loader-icon').show();
+            $('#targetLayer').hide();
+            $(this).ajaxSubmit({
+                target: '#targetLayer',
+                beforeSubmit:function(){
+                    $('.progress-bar').width('40%');
+                },
+                uploadProgress: function(event, position, total, percentageComplete)
+                {
+                    $('.progress-bar').animate({
+                        width: percentageComplete + '%'
+                    }, {
+                        duration: 1000
+                    });
+                },
+                success:function(data){
+                    $('#loader-icon').hide();
+                    $('#targetLayer').show();
+                    $('#targetLayer').append(data.htmlresponse);
+                },
+                resetForm: true
+            });
+        }
+        return false;
+    });
+});
+</script>
+</body>
+</html>
