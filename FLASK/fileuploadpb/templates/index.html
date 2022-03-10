@@ -9,28 +9,27 @@
 <!--<script src="/static/js/jquery.form.js"></script>-->
 </head>
     <body>
-        <div class="container">
-            <br />
-            <h3 align="center">File Upload</h3>
-            <br />
-            <div class="panel panel-default">
-                <div class="panel-heading"><b>Select file</b></div> <br>
-                <div class="panel-body">
+    <div  style="margin:25px"  class="shadow p-3 mb-5 bg-white rounded">Volumetric data</div>
+    <div class="row"  style="margin: 20px;padding: 10px;" >
+
+        <div  class="col-md-5" >
+        <div  style="width: 400px;">
+            <div class="card" >
+                <div class="card-header" >Band</div>
+                <div class="card-body">
                     <form id="uploadImage" action="/upload" method="post">
                         <div class="form-group">
-                            <label>File Upload</label> <br>
-                            <hr>
                             <input type="file" name="uploadFile" id="uploadFile" accept=".jpg, .png, .txt, .dos, .inp"/>
                         </div>
 
+
                         <span>
                             <div class="form-group">
-                                <input style="margin: 10px;" type="submit" id="uploadSubmit" value="Upload" class="btn btn-primary" />
+                                <input style="margin-top: 10px; width: 100px;" type="submit" id="uploadSubmit" value="Upload" />
                             </div>
-                            <div class="progress"  style="width: 400px;">
+                            <div class="progress"  style="width: 350px; height: 8px;margin-top: 10px;">
                                 <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-
                         </span>
 
 
@@ -40,11 +39,49 @@
                 </div>
             </div>
         </div>
+        <!--   end of 1,1 -->
 
+        <div style="margin-top:20px;">
+            <div class="card"  style="width: 400px;">
+                <div class="card-header">
+                    PATH
+                </div>
+                <div class="card-body">
 
-        <div  style="margin: 50px; padding: 20px; background-color: azure; box-shadow: 10px;">
-            <input type="text" name="name" id="name">
+                </div>
+            </div>
         </div>
+        <!--    end of 2,1-->
+
+
+
+        </div>
+        <!--End col 1-->
+
+        <div  class="col-md-6"  style="margin-left: 20px;">
+            <div class="card" >
+                <div  class="card-header">
+                    TEST
+                </div>
+                <div class="card-cody">
+                    <p>line</p>
+                </div>
+            </div>
+        </div>
+        <!--    end of col 2-->
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
 <script>
 $(document).ready(function(){
     $('#uploadImage').submit(function(event){
