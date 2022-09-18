@@ -1,0 +1,36 @@
+.headiv {
+    color: aliceblue;
+    background-image: url("./images/hpclong.jpg") ;
+    text-align: center;
+    background-size: contain;
+
+}
+
+
+#hpcol1 {
+    background-color: #03dac5;
+    color: #121212;
+    margin: 10px;
+}
+
+#hpcol2 {
+    background-color: #cf6679;
+    color: #121212;
+    margin: 10px;
+}
+
+
+
+#hpcol3 {
+    background-color: #bb86fc;
+    color: #121212;
+    margin: 10px;
+}
+
+
+
+
+a {
+    text-decoration: none;
+    color: #121212;
+}
