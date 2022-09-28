@@ -1,0 +1,72 @@
+.divanim {
+    width: 0%;
+    height: 10px;
+    background-color: #ff3c00f5;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    /* animation-iteration-count: infinite; */
+
+  }
+  
+  @keyframes example {
+    0%   {background-color: rgba(221, 85, 22, 0.13);width: 1%;}
+    25%  {background-color: rgba(255, 94, 0, 0.411);width: 25%;}
+    50%  {background-color: rgba(255, 102, 0, 0.78);width: 50%;}
+    75%  {background-color: rgba(255, 102, 0, 0.78);width: 75%;}
+    100% {background-color: #ff3c00f5;width: 100%;}
+  }
+
+
+
+.testdiv {
+    width: 50%;
+    margin-top: 20px;
+    height: 100px;
+    background-color: blueviolet;
+}
+
+
+.testdiv:hover {
+  background-color: aqua;
+}
+
+
+.classcirc {
+  background-color: black;
+}
+
+
+
+
+
+#car1 {
+  width: 150px;
+  margin-left: 2px;
+  animation-name: none;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+}
+
+
+
+@keyframes carmotion {
+  0% {transform: translate(0px) rotate(30deg);}
+  30% {transform: translate(100px, 100px) rotate(60deg);}
+  66% {transform: translate(200px) rotate(120deg);}
+  100% {transform: translate(300px) rotate(180deg);}
+}
+
+@keyframes fixcar {
+  0% {transform: translate(0px) ;}
+}
+
+
+.ellipse:hover {
+  background-color: blueviolet;
+}
+
+
+
+
